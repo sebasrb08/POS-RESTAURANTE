@@ -24,18 +24,19 @@ public class DetallePedidoDAO {
     public ArrayList<DetallePedido> listar(long idPedido){
         ArrayList<DetallePedido> detallePedido =  new ArrayList<>();
         try{
-            String url="SELECT dp.idDetallePedido, pr.nombre, dp.cantidad, dp.subtotal  FROM detallePedido as dp "
+            String url="SELECT dp.idDetallePedido, pl.nombre, pl.precioVenta ,dp.cantidad, dp.subtotal  FROM detallePedido as dp "
                     + "JOIN pedido as p ON p.idPedido = dp.idPedido "
-                    + "JOIN producto as pr ON pr.idProducto = dp.idProducto"
-                    + "WHERE dp.idPedido = ?";
+                    + "JOIN platos as pl ON pl.idPlatos = dp.idProducto"
+                    + "WHERE p.idPedido = ?";
             ps= con.prepareStatement(url);
             ps.setLong(1,idPedido);
             rs = ps.executeQuery();
             while (rs.next()) {
                 DetallePedido dp = new DetallePedido();
+                Pedidos p =  new Pedidos();
                 dp.setId(rs.getLong("idDetallePedido"));
-                dp.setIdPedido(rs.getLong("idPedido"));
-                dp.setIdProducto(rs.getLong("idProducto"));
+                dp.setNombrePlato(rs.getString("nombre"));
+                dp.setPrecioPlato(rs.getDouble("precioVenta"));
                 dp.setCantidad(rs.getInt("cantidad"));
                 dp.setSubtotal(rs.getInt("subtotal"));
                 detallePedido.add(dp);

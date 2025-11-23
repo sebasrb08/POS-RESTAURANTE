@@ -16,6 +16,8 @@ public class Pedidos {
     private LocalDateTime fecha;
     private String estado;
     private double total;
+    private int numeroMesa;
+    
 
     public Pedidos(long idMesa, LocalDateTime fecha, String estado, double total) {
         this.idMesa = idMesa;
@@ -69,5 +71,12 @@ public class Pedidos {
         this.total = total;
     }
     
+    public int getNumeroMesa() {
+        return numeroMesa;
+    }
+
+    public void setNumeroMesa(int numeroMesa) {
+        this.numeroMesa = numeroMesa;
+    }
     
 }

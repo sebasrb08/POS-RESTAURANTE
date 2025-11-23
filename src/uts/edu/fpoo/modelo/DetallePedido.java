@@ -14,6 +14,11 @@ public class DetallePedido {
     private long idProducto;
     private int cantidad;
     private double subtotal;
+    private String nombrePlato;
+    private double precioPlato;
+
+
+    
 
     public DetallePedido(long idPedido, long idProducto, int cantidad, double subtotal) {
         this.idPedido = idPedido;
@@ -65,6 +70,20 @@ public class DetallePedido {
         this.subtotal = subtotal;
     }
     
-    
+        public String getNombrePlato() {
+        return nombrePlato;
+    }
+
+    public void setNombrePlato(String nombrePlato) {
+        this.nombrePlato = nombrePlato;
+    }
+
+    public double getPrecioPlato() {
+        return precioPlato;
+    }
+
+    public void setPrecioPlato(double precioPlato) {
+        this.precioPlato = precioPlato;
+    }
     
 }
