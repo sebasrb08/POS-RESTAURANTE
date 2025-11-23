@@ -169,6 +169,38 @@ public class MenuOpciones extends JFrame {
             mostrarPantallaInicio();
         });
 
+        jLabel2 = new javax.swing.JLabel();
+        contentPanel = new javax.swing.JPanel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        PlatosMenuItem = new javax.swing.JMenuItem();
+        MesasMenuItem = new javax.swing.JMenuItem();
+        jMenuItem7 = new javax.swing.JMenuItem();
+        jMenuItem5 = new javax.swing.JMenuItem();
+        jMenuItem6 = new javax.swing.JMenuItem();
+        jMenuItem8 = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        pedidoEjecucionMenuItem = new javax.swing.JMenuItem();
+        jMenu3 = new javax.swing.JMenu();
+        jMenuItem9 = new javax.swing.JMenuItem();
+        jMenuItem10 = new javax.swing.JMenuItem();
+
+        jLabel2.setText("jLabel2");
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("MENU");
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        contentPanel.setBackground(new java.awt.Color(255, 255, 255));
+        contentPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(contentPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 430));
+
+        jMenu1.setText("Archivos");
+
+        PlatosMenuItem.setText("Platos");
+        PlatosMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PlatosMenuItemActionPerformed(evt);
 
                btnPlatos.addActionListener(new ActionListener() {
             @Override
@@ -387,6 +419,29 @@ public class MenuOpciones extends JFrame {
         
     }
 
+    /**
+     * @param args the command line arguments
+     */
+    
+    
+    
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem MesasMenuItem;
+    private javax.swing.JMenuItem PlatosMenuItem;
+    private javax.swing.JPanel contentPanel;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem10;
+    private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem6;
+    private javax.swing.JMenuItem jMenuItem7;
+    private javax.swing.JMenuItem jMenuItem8;
+    private javax.swing.JMenuItem jMenuItem9;
+    private javax.swing.JMenuItem pedidoEjecucionMenuItem;
+    // End of variables declaration//GEN-END:variables
     private void abrirMesasVista() {
         MesasVista mv = new MesasVista();
         new MesasControlador(mv);
