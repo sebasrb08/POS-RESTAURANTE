@@ -1,0 +1,56 @@
+# === NetBeans ===
+nbproject/private/
+nbproject/Makefile-*
+nbproject/*-private.properties
+
+# === Build files ===
+/build/
+/dist/
+/classes/
+/out/
+
+# === Compiled class files ===
+*.class
+
+# === Logs ===
+*.log
+
+# === OS files ===
+.DS_Store
+Thumbs.db
+
+# === Java ===
+*.jar
+!lib/*.jar        # <-- PERMITE los jar dentro de /lib si tú los manejas
+*.war
+*.ear
+
+# === SQLite Database ===
+*.db
+*.sqlite
+*.sqlite3
+
+# Si quieres que tu BD SÍ se suba, comenta la línea de arriba.
+
+# === Temporary ===
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# === IDEs ===
+
+# NetBeans
+nbproject/private/
+build/
+dist/
+
+# VSCode
+.vscode/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# === Git ===
+.gitignore~
