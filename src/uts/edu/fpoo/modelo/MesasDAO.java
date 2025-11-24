@@ -41,7 +41,7 @@ public class MesasDAO {
         }
         return mesas;
     }
-     public void agregar(Mesas mesa){
+    public void agregar(Mesas mesa){
         try{
             String url="INSERT INTO mesas(idMesas, numero, estado) values(?,?,?)";
             ps= con.prepareStatement(url);
