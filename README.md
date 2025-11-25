@@ -1,4 +1,4 @@
-# POS Restaurante – Proyecto Final FPOO
+# POS Restaurante – Proyecto Final POO
 
 Sistema de punto de venta (POS) para la gestión de un restaurante, desarrollado como **Proyecto final de la asignatura Fundamentos de Programación Orientada a Objetos (3er semestre)**.
 
