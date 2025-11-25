@@ -4,6 +4,7 @@
  */
 package uts.edu.fpoo.modelo;
 
+import java.util.HashMap;
 import uts.edu.fpoo.vista.login_frame;
 
 /**
@@ -11,11 +12,18 @@ import uts.edu.fpoo.vista.login_frame;
  * @author Usuario
  */
 public class login_class {
-    
-    public static void main(String[] args) {
-        login_frame loginFrame = new login_frame();
-        loginFrame.setVisible(true);
-        loginFrame.pack();
-        loginFrame.setLocationRelativeTo(null);
+    private HashMap<String, String> usuarios = new HashMap<>();
+
+    public login_class() {
+        usuarios.put("admin", "1234");
+        usuarios.put("mesero", "abcd");
+        usuarios.put("mesero2", "2468");
+    }
+
+    public boolean validarUsuario(String usuario, String contrasena) {
+        if (usuarios.containsKey(usuario)) {
+            return usuarios.get(usuario).equals(contrasena);
+        }
+        return false;
     }
 }

@@ -4,6 +4,8 @@
  */
 package uts.edu.fpoo.vista;
 
+import javax.swing.JOptionPane;
+import uts.edu.fpoo.modelo.login_class;
 import uts.edu.fpoo.vista.MenuOpciones;
 
 /**
@@ -106,7 +108,6 @@ public class login_frame extends javax.swing.JFrame {
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Serif", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(102, 0, 0));
         jLabel1.setText("LOGIN");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -121,7 +122,7 @@ public class login_frame extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(102, 0, 0));
+        jButton1.setBackground(new java.awt.Color(0, 0, 0));
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Login");
@@ -202,10 +203,20 @@ public class login_frame extends javax.swing.JFrame {
     }//GEN-LAST:event_jPasswordField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        String usuario = jTextField1.getText();
+        String contrasena =String.valueOf(jPasswordField1.getPassword());
         
-        MenuOpciones v2  = new MenuOpciones();
-        v2.setVisible(true);
-        this.setVisible(false);
+        login_class login = new login_class();
+        if(login.validarUsuario(usuario, contrasena)){
+            
+            JOptionPane.showMessageDialog(this,"Bienvenido "+ usuario);
+            
+            MenuOpciones vz = new MenuOpciones();
+            vz.setVisible(true);
+            this.setVisible(false);
+        }else{
+            JOptionPane.showMessageDialog(this,"Usuario o Contrasena incorrectos");
+        }
         
     }//GEN-LAST:event_jButton1ActionPerformed
 

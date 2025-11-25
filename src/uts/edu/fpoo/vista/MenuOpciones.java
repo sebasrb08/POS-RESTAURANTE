@@ -129,8 +129,6 @@ public class MenuOpciones extends JFrame {
                 new ImageIcon(getClass().getResource("/uts/edu/fpoo/icons/mesa.png")));
         JButton btnPedidos = crearBotonMenu("Pedidos",
                 new ImageIcon(getClass().getResource("/uts/edu/fpoo/icons/Movimientos.png")));
-        JButton btnUsuarios = crearBotonMenu("Usuarios",
-                new ImageIcon(getClass().getResource("/uts/edu/fpoo/icons/Archivo.png")));
         JButton btnAyuda = crearBotonMenu("Ayuda",
                 new ImageIcon(getClass().getResource("/uts/edu/fpoo/icons/Ayuda.png")));
 
@@ -142,7 +140,6 @@ public class MenuOpciones extends JFrame {
         sideMenuPanel.add(Box.createVerticalStrut(8));
         sideMenuPanel.add(btnPedidos);
         sideMenuPanel.add(Box.createVerticalStrut(8));
-        sideMenuPanel.add(btnUsuarios);
 
         sideMenuPanel.add(Box.createVerticalGlue()); // empuja hacia arriba
 
@@ -191,10 +188,6 @@ public class MenuOpciones extends JFrame {
             abrirPedidosVista();
         });
 
-        btnUsuarios.addActionListener(e -> {
-            marcarBotonSeleccionado(btnUsuarios);
-            mostrarMensajeSimple("Módulo de usuarios próximamente…");
-        });
 
         btnAyuda.addActionListener(e -> {
             marcarBotonSeleccionado(btnAyuda);

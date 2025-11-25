@@ -90,7 +90,7 @@ jPanel1.setBackground(new java.awt.Color(243, 248, 255));
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 204));
 
-        btnActualizar.setBackground(new java.awt.Color(153, 0, 51));
+        btnActualizar.setBackground(new java.awt.Color(0, 0, 0));
         btnActualizar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnActualizar.setForeground(new java.awt.Color(255, 255, 255));
         btnActualizar.setText("Actualizar");
@@ -100,17 +100,17 @@ jPanel1.setBackground(new java.awt.Color(243, 248, 255));
             }
         });
 
-        btnEliminar.setBackground(new java.awt.Color(153, 0, 51));
+        btnEliminar.setBackground(new java.awt.Color(0, 0, 0));
         btnEliminar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnEliminar.setForeground(new java.awt.Color(255, 255, 255));
         btnEliminar.setText("Eliminar");
 
-        btnListar.setBackground(new java.awt.Color(153, 0, 51));
+        btnListar.setBackground(new java.awt.Color(0, 0, 0));
         btnListar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnListar.setForeground(new java.awt.Color(255, 255, 255));
         btnListar.setText("Listar");
 
-        btnAgregar.setBackground(new java.awt.Color(153, 0, 51));
+        btnAgregar.setBackground(new java.awt.Color(0, 0, 0));
         btnAgregar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnAgregar.setForeground(new java.awt.Color(255, 255, 255));
         btnAgregar.setText("Agregar");
@@ -125,7 +125,6 @@ jPanel1.setBackground(new java.awt.Color(243, 248, 255));
         jLabel4.setText("Estado");
 
         jLabel5.setFont(new java.awt.Font("Serif", 1, 30)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(153, 0, 0));
         jLabel5.setText("Gestion De Mesas");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);

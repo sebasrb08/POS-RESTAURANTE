@@ -174,7 +174,7 @@ public class PlatosVista extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
 
-        btnActualizar.setBackground(new java.awt.Color(153, 0, 51));
+        btnActualizar.setBackground(new java.awt.Color(0, 0, 0));
         btnActualizar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnActualizar.setForeground(new java.awt.Color(255, 255, 255));
         btnActualizar.setText("Actualizar");
@@ -184,12 +184,12 @@ public class PlatosVista extends javax.swing.JFrame {
             }
         });
 
-        btnEliminar.setBackground(new java.awt.Color(153, 0, 51));
+        btnEliminar.setBackground(new java.awt.Color(0, 0, 0));
         btnEliminar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnEliminar.setForeground(new java.awt.Color(255, 255, 255));
         btnEliminar.setText("Eliminar");
 
-        btnListar.setBackground(new java.awt.Color(153, 0, 51));
+        btnListar.setBackground(new java.awt.Color(0, 0, 0));
         btnListar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnListar.setForeground(new java.awt.Color(255, 255, 255));
         btnListar.setText("Listar");
@@ -215,13 +215,12 @@ public class PlatosVista extends javax.swing.JFrame {
             }
         });
 
-        btnAgregar.setBackground(new java.awt.Color(153, 0, 51));
+        btnAgregar.setBackground(new java.awt.Color(0, 0, 0));
         btnAgregar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnAgregar.setForeground(new java.awt.Color(255, 255, 255));
         btnAgregar.setText("Agregar");
 
         jLabel7.setFont(new java.awt.Font("Serif", 1, 30)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(153, 0, 51));
         jLabel7.setText("Gestion de Platos");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -380,6 +379,7 @@ public class PlatosVista extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        
         PlatosVista pv = new PlatosVista();
         PlatosControlador con = new PlatosControlador(pv);
         pv.setVisible(true);
