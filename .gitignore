@@ -1,0 +1,20 @@
+# NetBeans
+nbproject/private/
+nbproject/private/private.xml
+nbproject/private/config.properties
+nbproject/private/ui-variables.xml
+
+# Build
+/build/
+dist/
+target/
+*.jar
+*.war
+
+# Java
+*.class
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

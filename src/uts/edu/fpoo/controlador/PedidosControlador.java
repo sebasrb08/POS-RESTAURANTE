@@ -4,6 +4,7 @@
  */
 package uts.edu.fpoo.controlador;
 
+<<<<<<< HEAD
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -18,10 +19,13 @@ import uts.edu.fpoo.modelo.PlatosDAO;
 import uts.edu.fpoo.vista.PedidosVista;
 import uts.edu.fpoo.vista.PlatosVista;
 
+=======
+>>>>>>> 91b9e10fa8c1f76cb6b0de7f346c66a745d286b2
 /**
  *
  * @author sebas
  */
+<<<<<<< HEAD
 public class PedidosControlador implements  ActionListener, ListSelectionListener{
     PedidosDAO dao = new PedidosDAO();
     PedidosVista pedidosVista = new PedidosVista();
@@ -75,5 +79,8 @@ public class PedidosControlador implements  ActionListener, ListSelectionListene
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
+=======
+public class PedidosControlador {
+>>>>>>> 91b9e10fa8c1f76cb6b0de7f346c66a745d286b2
     
 }

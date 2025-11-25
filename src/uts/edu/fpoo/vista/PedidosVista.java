@@ -4,6 +4,7 @@
  */
 package uts.edu.fpoo.vista;
 
+<<<<<<< HEAD
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -12,6 +13,9 @@ import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JTable;
 import javax.swing.JTextField;
+=======
+import java.util.ArrayList;
+>>>>>>> 91b9e10fa8c1f76cb6b0de7f346c66a745d286b2
 import uts.edu.fpoo.controlador.MesasControlador;
 import uts.edu.fpoo.controlador.PedidosControlador;
 import uts.edu.fpoo.modelo.Mesas;
@@ -28,13 +32,18 @@ public class PedidosVista extends javax.swing.JFrame {
      */
     public PedidosVista() {
         initComponents();
+<<<<<<< HEAD
         MesasDAO dao = new MesasDAO();
+=======
+         MesasDAO dao = new MesasDAO();
+>>>>>>> 91b9e10fa8c1f76cb6b0de7f346c66a745d286b2
         ArrayList<Mesas> lista = dao.listar();
     
         selectMesa.removeAllItems(); // limpiar combo
 
         for (Mesas m : lista) {
             selectMesa.addItem(String.valueOf( m.getNumero()));  // gracias al toString() se mostrará el nombre
+<<<<<<< HEAD
        }
         
         LocalDateTime ahora = LocalDateTime.now();
@@ -86,6 +95,9 @@ public class PedidosVista extends javax.swing.JFrame {
 
     public void setTxtTotal(JLabel txtTotal) {
         this.txtTotal = txtTotal;
+=======
+        }
+>>>>>>> 91b9e10fa8c1f76cb6b0de7f346c66a745d286b2
     }
 
     /**
@@ -99,6 +111,10 @@ public class PedidosVista extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+<<<<<<< HEAD
+=======
+        selectMesa = new javax.swing.JComboBox<>();
+>>>>>>> 91b9e10fa8c1f76cb6b0de7f346c66a745d286b2
         jLabel3 = new javax.swing.JLabel();
         txtEstado = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -107,18 +123,26 @@ public class PedidosVista extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tableProductos = new javax.swing.JTable();
         txtCodigoProducto = new javax.swing.JTextField();
+<<<<<<< HEAD
+=======
+        btnBuscarProducto = new javax.swing.JButton();
+>>>>>>> 91b9e10fa8c1f76cb6b0de7f346c66a745d286b2
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         txtTotal = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+<<<<<<< HEAD
         selectMesa = new javax.swing.JComboBox<>();
         btnBuscarProducto = new javax.swing.JButton();
+=======
+>>>>>>> 91b9e10fa8c1f76cb6b0de7f346c66a745d286b2
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel1.setText("Pedidos");
+<<<<<<< HEAD
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, -1, 20));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -182,6 +206,142 @@ public class PedidosVista extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnBuscarProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(472, 250, 90, 30));
+=======
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel2.setText("Mesa ");
+
+        selectMesa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                selectMesaActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setText("Estado");
+
+        txtEstado.setText("jLabel4");
+
+        jLabel5.setText("Fecha");
+
+        txtFecha.setText("jLabel6");
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel7.setText("Producto del pedido");
+
+        tableProductos.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "Id", "Nombre", "Precio", "Cantidad", "Subtotal"
+            }
+        ));
+        jScrollPane1.setViewportView(tableProductos);
+
+        txtCodigoProducto.setText("jTextField1");
+
+        btnBuscarProducto.setText("Buscar");
+        btnBuscarProducto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscarProductoActionPerformed(evt);
+            }
+        });
+
+        jLabel8.setText("Codigo");
+
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel9.setText("Total");
+
+        txtTotal.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtTotal.setText("numero");
+
+        jButton1.setText("Crear Pedido");
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(280, 280, 280)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(jLabel2)
+                        .addGap(23, 23, 23)
+                        .addComponent(selectMesa, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(jLabel3)
+                        .addGap(25, 25, 25)
+                        .addComponent(txtEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(20, 20, 20)
+                        .addComponent(txtFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel7))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel8)
+                        .addGap(21, 21, 21)
+                        .addComponent(txtCodigoProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(btnBuscarProducto))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(130, 130, 130)
+                        .addComponent(jLabel9)
+                        .addGap(31, 31, 31)
+                        .addComponent(txtTotal)))
+                .addContainerGap(376, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(selectMesa, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addComponent(jLabel7)
+                .addGap(15, 15, 15)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel8))
+                    .addComponent(txtCodigoProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnBuscarProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel9)
+                    .addComponent(txtTotal))
+                .addContainerGap(34, Short.MAX_VALUE))
+        );
+>>>>>>> 91b9e10fa8c1f76cb6b0de7f346c66a745d286b2
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -189,21 +349,37 @@ public class PedidosVista extends javax.swing.JFrame {
     private void btnBuscarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarProductoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnBuscarProductoActionPerformed
+<<<<<<< HEAD
+=======
+
+    private void selectMesaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectMesaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_selectMesaActionPerformed
+>>>>>>> 91b9e10fa8c1f76cb6b0de7f346c66a745d286b2
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
         PedidosVista pv = new PedidosVista();
+<<<<<<< HEAD
         PedidosControlador con = new PedidosControlador(pv);
+=======
+        //PedidosControlador con = new PedidosControlador(mv);
+>>>>>>> 91b9e10fa8c1f76cb6b0de7f346c66a745d286b2
         pv.setVisible(true);
         pv.setLocationRelativeTo(null);
     }
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+<<<<<<< HEAD
     public javax.swing.JButton btnBuscarProducto;
     public javax.swing.JButton jButton1;
+=======
+    private javax.swing.JButton btnBuscarProducto;
+    private javax.swing.JButton jButton1;
+>>>>>>> 91b9e10fa8c1f76cb6b0de7f346c66a745d286b2
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -213,11 +389,18 @@ public class PedidosVista extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JComboBox<String> selectMesa;
+<<<<<<< HEAD
     public javax.swing.JTable tableProductos;
+=======
+    private javax.swing.JTable tableProductos;
+>>>>>>> 91b9e10fa8c1f76cb6b0de7f346c66a745d286b2
     private javax.swing.JTextField txtCodigoProducto;
     private javax.swing.JLabel txtEstado;
     private javax.swing.JLabel txtFecha;
     private javax.swing.JLabel txtTotal;
     // End of variables declaration//GEN-END:variables
+<<<<<<< HEAD
 
+=======
+>>>>>>> 91b9e10fa8c1f76cb6b0de7f346c66a745d286b2
 }
